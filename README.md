@@ -6,7 +6,8 @@ Agenda:
 1. Data and Real Estate 
 
 - Case Studies 
-	- 
+	- Zillow 
+	- Smart Urban Cities 
 
 - Machine Learning Aside with Temperature Data: 
 
