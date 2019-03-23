@@ -55,3 +55,5 @@ Agenda:
 	
 	- Understanding the Confusion Matrix 
 
+
+Prepare fast.
