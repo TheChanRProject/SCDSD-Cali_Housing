@@ -14,5 +14,18 @@ data.drop(list(data.columns)[0], axis=1, inplace=True)
 data.head()
 
 
-X = data['x']
-Y = data['y']
+X = np.array(data['x']).reshape(-1,1)
+Y = np.array(data['y']).reshape(-1,1)
+
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size= 0.2, random_state=5)
+
+model = LinearRegression()
+model.fit(X_train,Y_train)
+
+y_train_pred = model.predict(X_train)
+rmse = np.sqrt(mean_squared_error(Y_train, y_train_pred))
+r2 = round(model.score(X_train, Y_train), 2)
+
+from IPython.display import display, Markdown
+display(Markdown("The Root $\\text{Mean}^2 $ Error is" + " {}".format(rmse)))
+display(Markdown(f"$R^2$ = {r2}"))
