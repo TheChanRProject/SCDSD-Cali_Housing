@@ -9,4 +9,10 @@ def farenheit(x):
 
 y = farenheit(x)
 print(y)
-    
+
+data_dict = {'x': x, 'y':y}
+print(data_dict)
+
+df = pd.DataFrame.from_dict(data_dict)
+df.head()
+df.to_csv("data/reg_demo_data.csv")
