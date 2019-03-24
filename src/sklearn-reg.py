@@ -12,3 +12,7 @@ data.head()
 print(list(data.columns))
 data.drop(list(data.columns)[0], axis=1, inplace=True)
 data.head()
+
+
+X = data['x']
+Y = data['y']
