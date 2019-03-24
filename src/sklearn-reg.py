@@ -37,3 +37,5 @@ display(Markdown(f"$R^2$ = {r2}"))
 # Optimized Parameters
 display(Markdown("$ \\beta_1 = $" + "{}".format(model.coef_[0])))
 display(Markdown("$ \\beta_0 = $" + "{}".format(model.intercept_)))
+
+# Visualizations 
