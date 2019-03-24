@@ -21,8 +21,10 @@ X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size= 0.2, random_
 
 model = LinearRegression()
 model.fit(X_train,Y_train)
-
 y_train_pred = model.predict(X_train)
+
+
+# Regression Assessment 
 rmse = np.sqrt(mean_squared_error(Y_train, y_train_pred))
 r2 = round(model.score(X_train, Y_train), 2)
 
