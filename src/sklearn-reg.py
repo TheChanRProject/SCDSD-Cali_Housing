@@ -7,6 +7,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import mean_squared_error
 
+
+jtplot.style(theme="monokai")
+
 data = pd.read_csv("data/reg_demo_data.csv")
 data.head()
 data.drop(list(data.columns)[0], axis=1, inplace=True)
@@ -38,4 +41,10 @@ display(Markdown(f"$R^2$ = {r2}"))
 display(Markdown("$ \\beta_1 = $" + "{}".format(model.coef_[0])))
 display(Markdown("$ \\beta_0 = $" + "{}".format(model.intercept_)))
 
-# Visualizations 
+# Visualizations
+plt.figure(figsize=(10,5))
+plt.scatter(X_train, Y_train)
+plt.plot(X_train, model.predict(X_train))
+plt.title("Linear Regression Plot of Celsius to Farenheit", size=30)
+plt.xlabel(r"$\degree C$", size=24)
+plt.ylabel(r"$\degree F$", size=24)
