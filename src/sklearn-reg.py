@@ -35,5 +35,5 @@ display(Markdown("The Root $\\text{Mean}^2 $ Error is" + " {}".format(rmse)))
 display(Markdown(f"$R^2$ = {r2}"))
 
 # Optimized Parameters
-display(Markdown("$ \\beta_1 = $" + "{}".format(model.coef_)))
+display(Markdown("$ \\beta_1 = $" + "{}".format(model.coef_[0])))
 display(Markdown("$ \\beta_0 = $" + "{}".format(model.intercept_)))
