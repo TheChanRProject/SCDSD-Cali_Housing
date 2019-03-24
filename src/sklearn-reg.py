@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as pyplot
+import matplotlib.pyplot as plt
 import seaborn as sns
 from jupyterthemes import jtplot
 from sklearn.linear_model import LinearRegression
