@@ -9,9 +9,9 @@ from sklearn.metrics import mean_squared_error
 
 data = pd.read_csv("data/reg_demo_data.csv")
 data.head()
-print(list(data.columns))
 data.drop(list(data.columns)[0], axis=1, inplace=True)
 data.head()
+print(list(data.columns))
 
 
 X = np.array(data['x']).reshape(-1,1)
